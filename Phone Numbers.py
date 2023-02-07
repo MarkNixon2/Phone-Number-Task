@@ -1,6 +1,9 @@
-def PhoneN():
-    f=open("PhoneNumber",'r')
-    for x in f:
-        x=x.strip()
-        print("{}-{}-{}".format(x[:3],x[3:6],x[6:]))
-        
+x = input("Enter phone number:")
+y = x.replace(" ", "")
+z = y.replace(")", "")
+b = z.replace("-", "")
+a = b.replace("(", "")
+line = ("({})-{}-{}".format(a[:3],a[3:6],a[6:]))
+f = open("PhoneNumbers","w")
+f.write(line)
+f.write('\n')
